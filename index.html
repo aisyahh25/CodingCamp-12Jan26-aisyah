@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,100 +14,137 @@
 
 <body>
 
-    <!-- Header Content -->
-     <header class="main-header p-[8px]">
-        <!--  Logo -->
-          <div class="logo"></div>
+<!-- ================= HEADER ================= -->
+<header class="main-header p-4 flex justify-between items-center">
+    <div class="logo font-bold text-lg"></div>
 
-          <!-- Navigation Menu -->
-          <nav class="flex">
-            <a class="border p-2 rounded"href=" #home">Home</a>
-            <a class="border p-2 rounded"href=" #about">Our Profile</a>
-            <a class="border p-2 rounded"href=" #projects">Portofolio</a>
-            <a class="border p-2 rounded"href=" #contact">Message Us</a>
-          </nav>
-    </header>
+    <nav class="flex gap-2">
+        <a class="border p-2 rounded" href="#home-page">Home</a>
+        <a class="border p-2 rounded" href="#our-profile-page">Our Profile</a>
+        <a class="border p-2 rounded" href="#portfolio-page">Portfolio</a>
+        <a class="border p-2 rounded" href="#message-us-page">Message Us</a>
+    </nav>
+</header>
 
-    <hr />
+<hr />
 
-    <!-- Main Content -->
-    <main>
-        <!-- Home Page -->
-        <section id="home-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
-            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
-        </section>
+<!-- ================= MAIN ================= -->
+<main>
 
-        <hr />
+<!-- Home -->
+<section id="home-page" class="min-h-[500px] text-center content-center">
+    <h2 class="text-xl font-bold" id="welcome-speech">Hi, I’m Aisyah</h2>
+    <p class="mt-2">
+        A passionate web developer who enjoys building clean, responsive,
+        and user-friendly websites using modern web technologies.
+    </p>
+</section>
 
-        <!-- Portfolio Page -->
-        <section id="portfolio-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">Our Portfolio</h2>
-            <p class="mt-2">Take a look at our diverse range of projects that showcase our skills and expertise.</p>
-        </section>
+<hr />
 
-        <hr />
+<!-- Profile -->
+<section id="our-profile-page" class="min-h-[500px] text-center content-center">
+    <h2 class="text-xl font-bold">About Me</h2>
 
-        <!-- Our Profile Page -->
-        <section id="our-profile-page" class="min-h-[500px] text-center content-center">
-            <h2 class="text-xl font-bold">About Aisyah Company</h2>
-            <p class="mt-2">Aisyah Company is dedicated to providing top-notch services in various domains.</p>
-        </section>
+    <p class="mt-2">
+        I am Aisyah, a dedicated web developer with a strong interest in front-end
+        development and website interactivity.
+    </p>
 
-        <hr />
+    <h3 class="mt-6 font-semibold">Vision</h3>
+    <p>
+        To continuously grow as a professional web developer and create
+        impactful digital solutions.
+    </p>
 
-        <!-- Message Us Page -->
-        <section id="message-us-page" class="min-h-[500px] mx-8">
-            <header>
-                <h2 class="text-xl font-bold">Message Us</h2>
-                <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
-                    promptly.</p>
-            </header>
+    <h3 class="mt-6 font-semibold">Mission</h3>
+    <ul class="list-disc list-inside">
+        <li>Develop responsive websites</li>
+        <li>Write clean and maintainable code</li>
+        <li>Continuously learn new technologies</li>
+    </ul>
+</section>
 
-            <form>
-                <div class="mb-4">
-                    <label class="block mb-2" for="name">Name:</label>
-                    <input class="w-full p-2 border rounded" type="text" id="name" name="name" required />
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="email">Email:</label>
-                    <input class="w-full p-2 border rounded" type="email" id="email" name="email" required />
-                </div>
-                <div class="mb-4">
-                    <label class="block mb-2" for="message">Message:</label>
-                    <textarea class="w-full p-2 border rounded" id="message" name="message" rows="5"
-                        required></textarea>
-                </div>
-                <button class="px-4 py-2 bg-blue-500 text-white rounded" type="button">Send Message</button>
-            </form>
-        </section>
+<hr />
 
-        <!-- Pop-up Result Message -->
-         <div id="popupResult" 
-            class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
-            
-            <div class="bg-white p-6 rounded shadow-lg text-center">
-                <h3 class="text-lg font-bold mb-4">Message Result</h3>
-                <p id="resultMessage" class="mb-4"></p>
-                
-                <button id="closePopup" 
-                    class="px-4 py-2 bg-red-500 text-white rounded">
-                    Close
-                </button>
-            </div>
+<!-- Portfolio -->
+<section id="portfolio-page" class="min-h-[500px] text-center content-center">
+    <h2 class="text-xl font-bold">Our Portfolio</h2>
 
-            <button id="submit-button" type="button">
-                Send Message
-            </button>
-    </main>
+    <div class="mt-8 grid md:grid-cols-3 gap-4">
+        <div class="border p-4 rounded">
+            <h3 class="font-semibold">Personal Portfolio Website</h3>
+            <p class="text-sm mt-2">
+                Responsive website using HTML, CSS, and JavaScript.
+            </p>
+        </div>
 
-    <!-- Footer Content -->
-    <footer>
-        <p class="text-center p-4 bg-gray-200">© 2024 Aisyah Company. All rights reserved.</p>
-    </footer>
+        <div class="border p-4 rounded">
+            <h3 class="font-semibold">Profile Website</h3>
+            <p class="text-sm mt-2">
+                Website with navigation and form validation.
+            </p>
+        </div>
 
-    <!-- JavaScript External -->
-    <script src="js/script.js"></script>
+        <div class="border p-4 rounded">
+            <h3 class="font-semibold">Message Form</h3>
+            <p class="text-sm mt-2">
+                JavaScript popup message implementation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<hr />
+
+<!-- Message Us -->
+<section id="message-us-page" class="min-h-[500px] mx-8">
+    <h2 class="text-xl font-bold">Message Us</h2>
+
+    <form id="messageForm" class="mt-6">
+        <div class="mb-4">
+            <label>Name</label>
+            <input id="name" class="w-full p-2 border rounded" type="text">
+        </div>
+
+        <div class="mb-4">
+            <label>Email</label>
+            <input id="email" class="w-full p-2 border rounded" type="email">
+        </div>
+
+        <div class="mb-4">
+            <label>Message</label>
+            <textarea id="message" class="w-full p-2 border rounded"></textarea>
+        </div>
+
+        <button id="submitBtn" type="button"
+            class="px-4 py-2 bg-blue-500 text-white rounded">
+            Send Message
+        </button>
+    </form>
+</section>
+
+<!-- Popup -->
+<div id="popupResult"
+    class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white p-6 rounded w-[400px]">
+        <h3 class="font-bold mb-4">Message Result</h3>
+        <p id="resultContent"></p>
+
+        <button id="closePopup"
+            class="mt-4 px-3 py-1 bg-red-500 text-white rounded">
+            Close
+        </button>
+    </div>
+</div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="text-center p-4 bg-gray-200">
+    © 2024 Aisyah. All rights reserved.
+</footer>
+
+<script src="js/script.js"></script>
 </body>
-
 </html>

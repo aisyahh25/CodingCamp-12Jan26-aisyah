@@ -1,60 +1,50 @@
-// Call the welcome function when the script loads 
+// ================= WELCOME MESSAGE =================
 welcomeMessage();
 
 function welcomeMessage() {
-    // Prompt the user for their name
-    let userResponse = prompt("What is your name:");
-
-    // If userResponse is null or empty, set a default name
-    if (userResponse === null || userResponse.trim() === "") {
+    let userResponse = prompt("What is your name?");
+    if (!userResponse || userResponse.trim() === "") {
         userResponse = "Guest";
     }
 
-    // Display the welcome message with the user's name
-    document.getElementById("welcome-speech").innerText = 
-    `Hello, ${userResponse}! Welcome to Our Company Website.`;
+    document.getElementById("welcome-speech").innerText =
+        `Hello, ${userResponse}! Welcome to my portfolio website.`;
 }
 
-// Message Us Pop-up
-const btnSend = document.querySelector('#submit-button');
+// ================= MESSAGE POPUP =================
+const btnSend = document.getElementById('submitBtn');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
 
 const popUp = document.getElementById('popupResult');
-const resultContent = document.getElementById('resultMessage');
+const resultContent = document.getElementById('resultContent');
 const closePopup = document.getElementById('closePopup');
+const form = document.getElementById('messageForm');
 
-btnSend.addEventListener('click', function(event) {
+btnSend.addEventListener('click', function () {
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
-    
+
     if (name === '' || email === '' || message === '') {
-        alert('Please fill in all fields before submitting the form.');
+        alert('Please fill in all fields!');
         return;
     }
 
-    const now = new Date();
-    const time = now.toString();
+    const time = new Date().toLocaleString();
 
-    //Isi pop up
     resultContent.innerHTML = `
-        <b>Current Time:</b> ${time} <br>
-        <b>Name:</b> ${name} <br>
-        <b>Email:</b> ${email} <br>
-        <b>Message:</b> ${message} <br>
+        <b>Time:</b> ${time}<br>
+        <b>Name:</b> ${name}<br>
+        <b>Email:</b> ${email}<br>
+        <b>Message:</b> ${message}
     `;
-    
-    popUp.classList.remove('hidden');
 
-    //Reset form
-    nameInput.value = '';
-    emailInput.value = '';
-    messageInput.value = '';
+    popUp.classList.remove('hidden');
+    form.reset();
 });
 
-    //Tutup pop up
-    closePopup.addEventListener('click', function() {
+closePopup.addEventListener('click', function () {
     popUp.classList.add('hidden');
-    });
+});
